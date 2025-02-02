@@ -17,10 +17,10 @@ Once valid input is provided in teh form, you will be able to click the "Purchas
 
 _Below enhancements will be done in the next phase:_
 
-Authentication implementation
-Improving the Cart features - clear cart, add / remove item from cart etc
-Credit Card Processing and Validation
-Add more products, product categories and improve the styling of the website.
+1. Authentication implementation
+2. Improving the Cart features - clear cart, add / remove item from cart etc
+3. Credit Card Processing and Validation
+4. Add more products, product categories and improve the styling of the website.
 
 _How to run this project:_
 
