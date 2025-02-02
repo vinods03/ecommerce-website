@@ -1,0 +1,59 @@
+<div class="product-list">
+  <li *ngFor="let product of products">
+    <a routerLink="/product/{{ product.id }}" routerLinkActive="active-link">
+      <img src="{{ product.image_url }}" />
+    </a>
+    <br />
+    <a
+      routerLink="/product/{{ product.id }}"
+      routerLinkActive="active-link"
+      class="product-name"
+    >
+      {{ product.name }}
+    </a>
+    <br />
+    <div class="product-price">
+      {{ product.unit_price | currency : "USD" }}
+    </div>
+    <br />
+    <button (click)="addToCart(product)">Add to cart</button>
+  </li>
+</div>
+
+<!-- <div class="product-list">
+  <li *ngFor="let product of products">
+    <a>
+      <img src="{{ product.image_url }}" onclick="openPopup()" />
+    </a>
+
+    
+
+    <a href="#" onclick="openPopup()">
+      {{ product.name }}
+    </a>
+    <br />
+    <div class="product-price">
+      {{ product.unit_price | currency : "USD" }}
+    </div>
+    <br />
+    <button (click)="addToCart(product)">Add to cart</button>
+
+    <div class="popup" id="popup">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <button type="button" onclick="closePopup()">OK</button>
+    </div>
+  </li>
+
+  <script>
+    let popup = document.getElementById("popup");
+
+    function openPopup() {
+      popup.classList.add("open-popup");
+    }
+
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+  </script>
+</div> -->

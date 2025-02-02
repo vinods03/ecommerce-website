@@ -1,0 +1,36 @@
+<!-- <app-product-categories></app-product-categories>
+<br />
+<app-products-by-product-category></app-products-by-product-category>
+<br />
+<router-outlet></router-outlet>
+<br />
+<app-cart-details></app-cart-details>
+<br />
+<app-cart-status></app-cart-status>
+<br />
+<app-checkout></app-checkout> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <menu>
+      <!-- <img src="assets/images/logo.png" /> -->
+      <img src="assets/images/online-shopping.png" />
+      <a routerLink="cart-details">
+        <app-cart-status></app-cart-status>
+      </a>
+    </menu>
+    <aside>
+      <app-product-categories></app-product-categories>
+    </aside>
+    <main>
+      <!-- <app-products-by-product-category></app-products-by-product-category> -->
+      <router-outlet></router-outlet>
+    </main>
+  </body>
+</html>

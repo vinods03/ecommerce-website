@@ -1,0 +1,21 @@
+<div class="cart-details">
+  <li *ngFor="let item of cartItems">
+    <img src="{{ item.image_url }}" class="img-responsive" />
+
+    <div class="product-name">
+      {{ item.name }}
+    </div>
+    <div class="product-price">
+      {{ item.unit_price | currency : "USD" }}
+    </div>
+  </li>
+
+  <div class="total-quantity-cart-details">
+    # of items: {{ total_quantity }}
+  </div>
+  <div class="total-price-cart-details">
+    Total Price: {{ total_price | currency : "USD" }}
+  </div>
+
+  <button routerLink="/checkout">Checkout</button>
+</div>

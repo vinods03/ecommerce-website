@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="product-details">
+      <img src="{{ product.image_url }}" />
+      <div class="product-name">{{ product.name }}</div>
+      <div class="product-description">{{ product.description }}</div>
+      <div class="product-price">
+        {{ product.unit_price | currency : "USD" }}
+      </div>
+      <div class="button-container">
+        <button (click)="addToCart(product)">Add to Cart</button>
+        <button (click)="goBack()" class="go-back-button">
+          Go Back to Shopping
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <div class="product-details">
+  <img src="{{ product.image_url }}" />
+  <div class="product-name">{{ product.name }}</div>
+  <div class="product-description">{{ product.description }}</div>
+  <div class="product-price">{{ product.unit_price | currency : "USD" }}</div>
+  <button (click)="addToCart(product)">Add to Cart</button>
+</div> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="{{ product.image_url }}" />
+       <div class="popup" id="popup">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <button type="button" onclick="closePopup()">OK</button>
+      </div>
+    </div>
+
+    <script>
+      let popup = document.getElementById("popup");
+
+      function openPopup() {
+        popup.classList.add("open-popup");
+      }
+
+      function closePopup() {
+        popup.classList.remove("open-popup");
+      }
+    </script>
+  </body>
+</html> -->

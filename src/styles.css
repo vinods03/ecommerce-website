@@ -1,0 +1,319 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* main body - full page division */
+
+body {
+  display: grid;
+  grid-template-columns: 250px 900px;
+  grid-template-rows: 80px 1fr;
+
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+
+  color: black;
+  text-align: center;
+
+  margin-top: 25px;
+  margin-left: 100px;
+}
+
+/* The top portion where store icon and cart status are shown */
+
+menu {
+  display: flex;
+  background-color: #04aa6d;
+  grid-column: 1 / -1;
+  padding: 10px 40px;
+  justify-content: space-between; /* so that 2 items are at each end of teh menu bar */
+}
+
+/* The side portion where product categories are shown */
+
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: #e9ecef;
+  /* overflow: scroll; How elements that don't fit into container appear */
+  padding: 40px;
+  gap: 40px;
+}
+
+/* The main portion where product list is displayed or product details are displayed */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* display formatting for product list */
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* overflow: scroll; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 10px 10px 10px;
+}
+
+/* display formatting for product details */
+
+.product-details {
+  display: inline-block;
+  width: 900px;
+  padding-left: 200px;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+/* images */
+
+img {
+  width: 80px;
+  height: auto;
+}
+
+.img-cart {
+  width: 60px;
+  height: auto;
+  padding-right: 10px;
+}
+
+/* buttons */
+
+button {
+  display: inline-block;
+  color: white;
+  background-color: #04aa6d;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap; /* button text in single line */
+  border: none;
+  margin-top: 10px;
+  padding: 15px 32px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.go-back-button {
+  display: inline-block;
+  color: white;
+  background-color: grey;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;
+  margin-left: 10px;
+  transition-duration: 0.4s;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: white;
+  color: #04aa6d;
+}
+
+/* for disabling Purchase button in checkout form till all form inputs are valid */
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* display formatting for specific attributes */
+
+.product-name {
+  font-size: 14px;
+  text-decoration: none; /* to remove underline */
+  color: #04aa6d;
+}
+
+.product-price {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #04aa6d;
+}
+
+.product-description {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #04aa6d;
+  justify-content: left;
+}
+
+.category-name {
+  font-size: 16px;
+  text-decoration: none; /* to remove underline */
+  color: #04aa6d;
+}
+
+.total-quantity {
+  margin-top: 10px;
+  /*margin-bottom: 5px; */
+  font-size: 14px;
+  color: white;
+}
+
+.total-price {
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+  font-size: 14px;
+  color: white;
+}
+
+.total-quantity-cart-details {
+  margin-top: 45px;
+  /*margin-bottom: 5px; */
+  font-size: 20px;
+  color: #04aa6d;
+}
+
+.total-price-cart-details {
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+  font-size: 20px;
+  color: #04aa6d;
+}
+
+/* cart formatting */
+
+.cart-status {
+  display: flex;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Checkout Form */
+
+.form-container {
+  width: 400px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #04aa6d;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+label {
+  font-size: 14px;
+  text-decoration: none;
+  color: #04aa6d;
+  padding-bottom: 17px;
+  /* margin-right: 30px; */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+select {
+  width: 10rem;
+  border: #b2eeac 2px solid;
+  padding: 12px 20px;
+  margin: 8px 15px 20px;
+}
+
+.alert-danger {
+  color: red;
+}
+
+/* For popup - not used in this project though */
+
+/* .container {
+  width: 100%;
+  height: 100vh;
+  background: #3c5077;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50% -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50% -50%) scale(1);
+}
+
+.popup h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.popup button {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+} */
