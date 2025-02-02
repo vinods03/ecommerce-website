@@ -4,7 +4,7 @@
 2. Application tier is built using: API Gateway, Lambda
 3. Data tier is built using: DynamoDB
 
-Below is the general layout / features of the website:
+_Below is the general layout / features of the website:_
 
 The menu bar at the top has the ecommerce website icon on the left hand corner and a Cart icon on the right corner.
 Product categories are listed on the side menu and products are listed in the main window.
@@ -15,14 +15,14 @@ Next, when you click on the Cart icon, you will be taken to teh Cart details scr
 From here, if you click on the "Checkout" button, you will be taken to a form, where you will have to provide name, address and credit card details.
 Once valid input is provided in teh form, you will be able to click the "Purchase" button. When this is done, an entry is made in the DynamoDB table with all details captured above (name, address, cart items, total value etc) and a reference number (called Order Tracking number) is returned to the user.
 
-Below enhancements will be done in the next phase:
+_Below enhancements will be done in the next phase:_
 
 Authentication implementation
 Improving the Cart features - clear cart, add / remove item from cart etc
 Credit Card Processing and Validation
-Add more products, produc categories and Improve the Styling of the website.
+Add more products, product categories and improve the styling of the website.
 
-How to run this project:
+_How to run this project:_
 
 1. Once you have copied the source code on to your local machine, run the below command in a VS Code Editor Terminal. Change the path as needed:
 D:\Vinod\Angular2024\retail-website-app\angular-retail-website-app> ng serve -o
